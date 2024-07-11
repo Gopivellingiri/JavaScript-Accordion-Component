@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    --primary-color:#2d3bb5;
+    --secondary-color:#3a49d9;
+    --light-color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+}
+.accordion {
+    max-width: 530px;
+    width: 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+    /* background: var(--secondary-color); */
+    /* margin: 0 15px; */
+    /* padding: 15px; */
+    /* border-radius: 8px; */
+    }
+    .accordion .accordion-content {
+     margin: 10px 0;
+       
+    }
+
+.accordion-content header {
+    display: flex;
+    border-radius: 8px;
+    min-height: 50px;
+    background-color: var(--secondary-color);
+    padding: 0 15px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s linear;
+}
+.accordion-content.open header {
+    border-radius: 8px 8px 0 0;
+    background-color: var(--light-color);
+}
+.accordion-content header .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--light-color);
+
+}
+.accordion-content.open header i,
+.accordion-content.open header .title {
+    color:#333
+}
+.accordion-content header i {
+    font-size: 15px;
+    color: var(--light-color);
+}
+
+.accordion-content .description {
+    height: 0px;
+    overflow: hidden;
+    padding: 0px 15px;
+    background-color: var(--light-color);
+    border-radius: 0 0 8px 8px;
+    transition: all 0.2s linear;
+}
+
+.accordion-content.open .description {
+    padding: 5px 15px;
+    
+}
